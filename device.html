@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        function redirAndroid() {
+            const app = atob(atob('YVdSbGJtWjVaWEk2THk5MFpYTjBMbU52YlQ5MGIydGxiajA9'));
+            let hash = location.hash;
+            if (hash.length > 0) {
+                let token = hash.substring(1);
+                window.open(app + token, '_self');
+            }
+        }
+    </script>
+
+    <button onclick="redirAndroid()">
+        <h1>Android</h1>
+    </button>
+
+</body>
+
+</html>
