@@ -11,6 +11,9 @@
         function redirTo(app) {
             let urlApp = ''
             switch (app) {
+                case 'ios':
+                    urlApp = atob(atob('YVdSbGJubGxjam92TDNSbGMzUXVZMjl0UDNSdmEyVnVQUT09'));
+                    break;
                 case 'android':
                     urlApp = atob(atob('YVdSbGJtWjVaWEk2THk5MFpYTjBMbU52YlQ5MGIydGxiajA9'));
                     break;
@@ -30,6 +33,9 @@
         <h1>Android</h1>
     </button>
 
+    <button onclick="redirTo('ios')">
+        <h1>iOS(iPhone)</h1>
+    </button>
 </body>
 
 </html>
