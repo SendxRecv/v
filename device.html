@@ -8,17 +8,25 @@
 
 <body>
     <script>
-        function redirAndroid() {
-            const app = atob(atob('YVdSbGJtWjVaWEk2THk5MFpYTjBMbU52YlQ5MGIydGxiajA9'));
+        function redirTo(app) {
+            let urlApp = ''
+            switch (app) {
+                case 'android':
+                    urlApp = atob(atob('YVdSbGJtWjVaWEk2THk5MFpYTjBMbU52YlQ5MGIydGxiajA9'));
+                    break;
+                default:
+                    alert('Error');
+                    return;
+            }
             let hash = location.hash;
             if (hash.length > 0) {
                 let token = hash.substring(1);
-                window.open(app + token, '_self');
+                window.open(urlApp + token, '_self');
             }
         }
     </script>
 
-    <button onclick="redirAndroid()">
+    <button onclick="redirTo('android')">
         <h1>Android</h1>
     </button>
 
